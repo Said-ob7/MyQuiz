@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingClass"
+    android:orientation="vertical"
+    android:background="@drawable/quiz_background2"
+    tools:context=".Quiz4">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="100dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/to_kill_a_mocking_bird"
+        >
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="HardcodedText">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Question: Who wrote the famous novel To Kill a Mockingbird?"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="257dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mark Twain"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harper Lee"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="J.K. Rowling"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText">
+            </RadioButton>
+        </RadioGroup>
+        <Button
+            android:id="@+id/NextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            app:backgroundTint="@null"
+            android:background="@drawable/button_custom2"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:minWidth="355dp"
+            android:minHeight="48dp"
+            tools:ignore="HardcodedText"
+            >
+        </Button>
+    </LinearLayout>
+
+
+
+</LinearLayout>
