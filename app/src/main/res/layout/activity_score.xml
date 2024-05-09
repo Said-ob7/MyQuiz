@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main"
@@ -45,6 +46,46 @@
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         tools:ignore="HardcodedText" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        >
+
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            app:backgroundTint="@null"
+            android:background="@drawable/button_custom"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:minWidth="150dp"
+            android:minHeight="48dp"
+            tools:ignore="HardcodedText"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/btnTryAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Try Again"
+            app:backgroundTint="@null"
+            android:background="@drawable/button_custom"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:minWidth="150dp"
+            android:minHeight="48dp"
+            tools:ignore="HardcodedText"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
 
 
 </LinearLayout>

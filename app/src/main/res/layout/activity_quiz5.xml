@@ -11,7 +11,7 @@
     tools:context=".Quiz3">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="60dp"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
@@ -68,7 +68,17 @@
                 android:textColor="@color/white"
                 tools:ignore="HardcodedText">
             </RadioButton>
-        </RadioGroup>
+        </RadioGroup><TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:text="Time left: 30 seconds"
+        android:layout_below="@id/rg"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="16dp"/>
+
         <Button
             android:id="@+id/NextBtn"
             android:layout_width="wrap_content"
@@ -79,7 +89,7 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:padding="16dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:minWidth="355dp"
             android:minHeight="48dp"

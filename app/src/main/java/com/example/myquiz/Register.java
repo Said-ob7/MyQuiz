@@ -41,7 +41,7 @@ public class Register extends AppCompatActivity {
             return insets;
         });
 
-        FullName = findViewById(R.id.NameRegister);
+//        FullName = findViewById(R.id.NameRegister);
         Email = findViewById(R.id.EmailRegister);
         Password = findViewById(R.id.PasswordRegister);
         ConfirmPassword = findViewById(R.id.ConfirmPasswordRegister);

@@ -3,6 +3,8 @@ package com.example.myquiz;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -12,6 +14,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Score extends AppCompatActivity {
 
     ProgressBar Pb;
@@ -19,6 +23,9 @@ public class Score extends AppCompatActivity {
     TextView Tvscore;
 
     int score;
+
+    Button btnLogout;
+    Button TryAgain;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -36,6 +43,8 @@ public class Score extends AppCompatActivity {
 
         Pb = findViewById(R.id.Progressbar);
         Tvscore = findViewById(R.id.tvScore);
+        btnLogout = findViewById(R.id.btnLogout);
+        TryAgain = findViewById(R.id.btnTryAgain);
 
         int percentageScore = (score * 100) / 5;
 
@@ -45,5 +54,24 @@ public class Score extends AppCompatActivity {
 
         Tvscore.setText(percentageScore + "%");
         Pb.setRotation(0);
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Logout user
+                FirebaseAuth.getInstance().signOut();
+                // Navigate back to login or any other appropriate activity
+                startActivity(new Intent(Score.this, MainActivity.class));
+                finish();
+            }
+        });
+
+        TryAgain.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i1=new Intent(getApplicationContext(), Quiz1.class);
+                startActivity(i1);
+                finish();
+            }
+        });
     }
 }
