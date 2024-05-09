@@ -15,17 +15,19 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Score extends AppCompatActivity {
 
     ProgressBar Pb;
-
     TextView Tvscore;
-
     int score;
 
     Button btnLogout;
     Button TryAgain;
+
+    TextView leaderboard;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -39,21 +41,29 @@ public class Score extends AppCompatActivity {
             return insets;
         });
         Intent i2 = getIntent();
-        score = i2.getIntExtra("score",0);
+        score = i2.getIntExtra("score", 0);
 
         Pb = findViewById(R.id.Progressbar);
         Tvscore = findViewById(R.id.tvScore);
         btnLogout = findViewById(R.id.btnLogout);
         TryAgain = findViewById(R.id.btnTryAgain);
+        leaderboard = findViewById(R.id.leaderboard);
 
         int percentageScore = (score * 100) / 5;
 
         Pb.setMax(100);
-
         Pb.setProgress(percentageScore);
 
         Tvscore.setText(percentageScore + "%");
         Pb.setRotation(0);
+
+        // Get the authenticated user's ID
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        // Update the user's score in the database
+        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users").child(userId);
+        userRef.child("score").setValue(score);
+
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,11 +75,19 @@ public class Score extends AppCompatActivity {
             }
         });
 
-        TryAgain.setOnClickListener(new View.OnClickListener(){
+        TryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent i1=new Intent(getApplicationContext(), Quiz1.class);
+            public void onClick(View v) {
+                Intent i1 = new Intent(getApplicationContext(), Quiz1.class);
                 startActivity(i1);
+                finish();
+            }
+        });
+        leaderboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 =new Intent(getApplicationContext(),LeaderboardActivity.class);
+                startActivity(i2);
                 finish();
             }
         });

@@ -9,6 +9,18 @@
     tools:context=".Score"
     android:background="@drawable/quiz_background2"
     >
+    <TextView
+        android:id="@+id/leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LeaderBoard"
+        android:textColor="@color/white"
+        android:layout_gravity="right"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:drawableEnd="@drawable/arrow_forward"
+        android:drawablePadding="8dp"
+    />
 
     <ProgressBar
         android:id="@+id/Progressbar"

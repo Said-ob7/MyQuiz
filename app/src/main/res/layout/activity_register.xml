@@ -23,31 +23,31 @@
         android:textSize="40sp"
         tools:ignore="HardcodedText" />
 
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Full Name"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:layout_marginStart="25dp"-->
-<!--        android:layout_marginEnd="25dp"-->
-<!--        android:layout_marginTop="50dp"-->
-<!--        tools:ignore="HardcodedText">-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UserName"
+        android:textColor="@color/white"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="10dp"
+        tools:ignore="HardcodedText">
 
-<!--    </TextView>-->
+    </TextView>
 
-<!--    <EditText-->
-<!--        android:id="@+id/NameRegister"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:inputType="textEmailAddress"-->
-<!--        android:hint="Enter your Name"-->
-<!--        android:layout_marginTop="5dp"-->
-<!--        android:layout_marginLeft="25dp"-->
-<!--        android:layout_marginRight="25dp"-->
-<!--        android:textColor="#BDBDBD"-->
-<!--        android:background="@drawable/edittext_outline"-->
-<!--        android:padding="16dp"-->
-<!--        tools:ignore="HardcodedText" />-->
+    <EditText
+        android:id="@+id/UserNameReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Enter your Name"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textColor="@color/black"
+        android:background="@drawable/edittext_outline"
+        android:padding="16dp"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:layout_width="match_parent"
@@ -70,7 +70,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:textColor="#BDBDBD"
+        android:textColor="@color/black"
         android:background="@drawable/edittext_outline"
         android:padding="16dp"
         tools:ignore="HardcodedText" />
@@ -96,7 +96,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:textColor="#BDBDBD"
+        android:textColor="@color/black"
         android:background="@drawable/edittext_outline"
         android:padding="16dp"
         tools:ignore="HardcodedText" />
@@ -121,7 +121,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:textColor="#BDBDBD"
+        android:textColor="@color/black"
         android:background="@drawable/edittext_outline"
         android:padding="16dp"
         tools:ignore="HardcodedText" />

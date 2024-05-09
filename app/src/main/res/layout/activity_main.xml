@@ -42,7 +42,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:textColor="#BDBDBD"
+        android:textColor="@color/black"
         android:background="@drawable/edittext_outline"
         android:padding="16dp"
         tools:ignore="HardcodedText" />
@@ -69,7 +69,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:textColor="#BDBDBD"
+        android:textColor="@color/black"
         android:background="@drawable/edittext_outline"
         android:padding="16dp"
         tools:ignore="HardcodedText" />
