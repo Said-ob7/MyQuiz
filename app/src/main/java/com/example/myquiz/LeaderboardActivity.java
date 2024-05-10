@@ -61,8 +61,9 @@ public class LeaderboardActivity extends AppCompatActivity {
                     // Check if the score value exists
                     if (scoreValue != null) {
                         int score = scoreValue.intValue();
+                        int percentage = (score * 100)/5;
                         // Add the username and score to the leaderboard list
-                        leaderboardList.add(username + ": " + score);
+                        leaderboardList.add(username + ": " + percentage);
                     }
                 }
 

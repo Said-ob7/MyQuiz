@@ -29,7 +29,7 @@ public class Score extends AppCompatActivity {
 
     TextView leaderboard;
 
-    @SuppressLint("SetTextI18n")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
