@@ -30,31 +30,31 @@ public class LeaderboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
 
-        // Initialize Firebase Database
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         usersRef = database.getReference("users");
 
-        // Initialize UI components
+
         listView = findViewById(R.id.listView);
         leaderboardList = new ArrayList<>();
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, leaderboardList);
         listView.setAdapter(adapter);
 
-        // Fetch and display leaderboard data
+
         displayLeaderboard();
     }
 
     private void displayLeaderboard() {
-        // Add ValueEventListener to fetch data from database
+
         usersRef.orderByChild("score").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // Clear the leaderboard list before adding new data
                 leaderboardList.clear();
 
-                // Iterate through each child node (user) in the "users" node
+
                 for (DataSnapshot userSnapshot : dataSnapshot.getChildren()) {
-                    // Get the username and score of each user
+
                     String username = userSnapshot.child("username").getValue(String.class);
                     Integer scoreValue = userSnapshot.child("score").getValue(Integer.class);
 
@@ -62,12 +62,12 @@ public class LeaderboardActivity extends AppCompatActivity {
                     if (scoreValue != null) {
                         int score = scoreValue.intValue();
                         int percentage = (score * 100)/5;
-                        // Add the username and score to the leaderboard list
-                        leaderboardList.add(username + ": " + percentage);
+
+                        leaderboardList.add(username + ": " + percentage + "%");
                     }
                 }
 
-                // Notify the adapter that the data has changed
+
                 adapter.notifyDataSetChanged();
             }
 

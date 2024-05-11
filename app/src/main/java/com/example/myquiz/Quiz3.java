@@ -76,7 +76,7 @@ public class Quiz3 extends AppCompatActivity {
                                 } else {
                                     Toast.makeText(getApplicationContext(), "Incorrect!", Toast.LENGTH_SHORT).show();
                                 }
-                                proceedToNextPageWithScore(score);
+                                NextPageScore(score);
                             } else {
                                 // Handle if answer doesn't exist in the database
                                 Toast.makeText(getApplicationContext(), "Answer not found in database", Toast.LENGTH_SHORT).show();
@@ -109,7 +109,7 @@ public class Quiz3 extends AppCompatActivity {
             @Override
             public void onFinish() {
 
-                proceedToNextPageWithScore(0);
+                NextPageScore(0);
             }
         }.start();
     }
@@ -145,7 +145,7 @@ public class Quiz3 extends AppCompatActivity {
             }
         });
     }
-    private void proceedToNextPageWithScore(int score) {
+    private void NextPageScore(int score) {
         // Your code for proceeding to the next page
         Intent intent = new Intent(Quiz3.this, Quiz4.class);
         intent.putExtra("score", score);
